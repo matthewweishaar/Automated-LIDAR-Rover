@@ -34,7 +34,7 @@ int main(int argc, char **argv){
    pose.y = 0.0;
    pose.theta = M_PI/2; 
    while(ros::ok()){
-      pose.x = pose.x + velocity.linear.x;//equation 
+      pose.x = pose.x + velocity.linear.x;
       pose.y = pose.y + velocity.linear.y;
       pose.theta = atan2(pose.y,pose.x);
       my_publisher_object.publish(pose); //publish the system state
